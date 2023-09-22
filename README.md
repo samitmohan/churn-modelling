@@ -1,4 +1,4 @@
-first_telc.csv
+first_telc.csv : template for csv
 
 [gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines,
 InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport,
@@ -29,3 +29,11 @@ take 19 inputs, create tenure grp since model testing has tenure grps, drop
 
 then convert everything to one hot encoder (all 19 to 50/51 columns)
 {technically not 19, probably 17 (exclude monthly and total charges)}
+
+TODO : fix monthlycharges issue : make app work
+ADD : 2 Options : Manual Select and Upload CSV (use on hot encoder after uploaded)
+      Time taken to process the CSV (multi-threading)
+      Database (Track what all is uploaded before)
+      Images (Make UI better, genpact logo etc..)
+      About Page.
+# Try to make it look like ATS resume
