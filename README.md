@@ -30,10 +30,15 @@ take 19 inputs, create tenure grp since model testing has tenure grps, drop
 then convert everything to one hot encoder (all 19 to 50/51 columns)
 {technically not 19, probably 17 (exclude monthly and total charges)}
 
-TODO : Fix CSV Data Upload (perform one hot encoding) <br> 
+TODO <br>
+Fix CSV Data Upload for singluar (perform one hot encoding) <br> 
 Time taken to process CSV (multi-threading) <br>
-Database (Track) <br>
+Database / Try Else Add Prob of Churn in dataset and show that (if possible) (Track) <br>
+Add better images <br> 
+Document code better <br>
+Meaning of each line / remove redundant lines etc.. <br>
+Upload to github (properly with photos) : Project <br>
 
 </br> 
 <br>
-Refer ATS
+Refer ATS code.
