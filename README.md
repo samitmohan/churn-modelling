@@ -30,10 +30,10 @@ take 19 inputs, create tenure grp since model testing has tenure grps, drop
 then convert everything to one hot encoder (all 19 to 50/51 columns)
 {technically not 19, probably 17 (exclude monthly and total charges)}
 
-TODO : fix monthlycharges issue : make app work
-ADD : 2 Options : Manual Select and Upload CSV (use on hot encoder after uploaded)
-      Time taken to process the CSV (multi-threading)
-      Database (Track what all is uploaded before)
-      Images (Make UI better, genpact logo etc..)
-      About Page.
-# Try to make it look like ATS resume
+TODO : Fix CSV Data Upload (perform one hot encoding) <br> 
+Time taken to process CSV (multi-threading) <br>
+Database (Track) <br>
+
+</br> 
+<br>
+Refer ATS
