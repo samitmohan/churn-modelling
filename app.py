@@ -116,7 +116,6 @@ def process_csv(file_upload):
         data = pd.concat([df_1, data], ignore_index=True)
 
         # Insert records from the CSV into the database
-        # COMMENT THIS (Not working for now)
         for index, row in data.iterrows():
             cursor.execute(
                 """
@@ -127,7 +126,27 @@ def process_csv(file_upload):
                     PaperlessBilling, PaymentMethod, tenure
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
-                tuple(row),
+                (
+                    row["SeniorCitizen"],
+                    row["MonthlyCharges"],
+                    row["TotalCharges"],
+                    row["gender"],
+                    row["Partner"],
+                    row["Dependents"],
+                    row["PhoneService"],
+                    row["MultipleLines"],
+                    row["InternetService"],
+                    row["OnlineSecurity"],
+                    row["OnlineBackup"],
+                    row["DeviceProtection"],
+                    row["TechSupport"],
+                    row["StreamingTV"],
+                    row["StreamingMovies"],
+                    row["Contract"],
+                    row["PaperlessBilling"],
+                    row["PaymentMethod"],
+                    row["tenure"],
+                ),
             )
         conn.commit()
         end_time = time.time()
@@ -409,9 +428,6 @@ def main():
         if file_upload is not None:
             if st.button("Process CSV"):
                 uploaded_data = process_csv(file_upload)
-                if uploaded_data is not None:
-                    st.subheader("Uploaded Customer Records")
-                    st.write(uploaded_data)  # show in DF
 
         # Display previously entered records
         st.subheader("Customer Records")

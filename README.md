@@ -36,7 +36,5 @@ As input : expected : concrete values : 19 inputs. {can also do CSV}, take 19 in
 'tenure'
 then convert everything to one hot encoder (all 19 to 50/51 columns)
 
-## TODO
-
-ASK Vineet
-Fix the upload csv method. + fix showing records in upload csv
+# TODO -:
+Add Photos + Deploy
